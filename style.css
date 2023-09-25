@@ -1,0 +1,131 @@
+@font-face {
+    font-family: grotesk;
+    src: url(./founders-grotesk.ttf);
+}
+
+@font-face {
+    font-family: galien;
+    src: url(./galien.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: galien;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    background-color: #f6eee3;
+    overflow-y: scroll;
+    overflow: hidden;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+
+}
+
+#nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2vw 3vw;
+    padding-bottom: .5vw;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+}
+
+#nav h3 {
+    font-size: 1.8vw;
+    font-weight: 400;
+}
+
+.navpt2>h4 {
+    font-weight: 500;
+    font-size: .9vw;
+    letter-spacing: .1vw;
+    font-family: galien;
+}
+
+.page {
+    height: 100vh;
+    position: relative;
+    width: 100%;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+}
+
+#text {
+    /* background-color: rgb(46, 34, 34); */
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    left: 50%;
+    /* line-height: .8; */
+    transform: translate(-50%, -50%);
+}
+
+#text h1 {
+    font-size: 22vw;
+    color: #F33F3A;
+    transform: translateY(-90%);
+    font-weight: 500;
+    line-height: .8;
+
+}
+#text h1 span{
+    display: inline-block;
+    line-height: .8;
+    white-space: nowrap;
+    
+}
+#images {
+    position: relative;
+    height: 100vh;
+    /* background-color: saddlebrown; */
+}
+
+#images img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    opacity: 0;
+}
+
+.centerimg {
+    width: 25vw;
+    height: 40vw;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 1;
+}
+
+.leftimg {
+    width: 16vw;
+    height: 22vw;
+    position: absolute;
+    top: 60%;
+    left: 48%;
+    transform: translate(-50%, -50%) rotate(-17deg);
+}
+
+.rightimg {
+    width: 16vw;
+    height: 22vw;
+    top: 48%;
+    left: 52%;
+    transform: translate(-50%, -50%) rotate(17deg);
+}
